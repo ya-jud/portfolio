@@ -1,5 +1,5 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 let mode = 'development';
 if(process.env.NODE_ENV === 'production') {
@@ -12,13 +12,20 @@ const plugins = [
     }),
 ];
 
-module.exports = {
+const config = {
     mode,
     plugins,
     entry: "./src/main.js",
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(path.join(process.cwd()), 'dist'),
         clean: true,
+    },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        modules: [path.join(process.cwd(), 'src'), 'node_modules'],
+        alias: {
+            react: path.join(process.cwd(), 'node_modules', 'react'),
+        },
     },
     module: {
         rules: [
@@ -41,3 +48,5 @@ module.exports = {
         hot: true,
     },
 };
+
+export default config;

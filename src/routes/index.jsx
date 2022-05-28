@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
 
-import Test from '../pages/Test.jsx';
+import Test from '../pages/Test';
 
 const AppRoutes = () => {
     return(
