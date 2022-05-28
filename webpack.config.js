@@ -15,7 +15,7 @@ const plugins = [
 module.exports = {
     mode,
     plugins,
-    entry: "./main.js",
+    entry: "./src/main.js",
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,

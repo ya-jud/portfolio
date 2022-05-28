@@ -1,34 +1,26 @@
-// 'use strict';
+import React from 'react';
+import { Route, Routes } from 'react-router'
 
-// class LikeButton extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { liked: false };
-//   }
+const Test = () => {
+  return (
+    <div> ПРОСТО ДИВ НАХУЙ С ТЕКСТОМ 
+      {/* <Routes>
+        <Route path='/'>
 
-//   render() {
-//     if (this.state.liked) {
-//       return 'You liked this.';
-//     }
+        </Route>
+      </Routes> */}
+    </div>
+  );
+}
 
+export default Test;
+
+// export default class TestComponent extends React.Component {
+//   render(){
 //     return (
-//       <button onClick={() => this.setState({ liked: true }) }>
-//         Like
-//       </button>
+//       <h1 id='app'>Привет, мир!</h1>,
+//       document.getElementById('root')
 //     );
 //   }
 // }
 
-// let domContainer = document.querySelector('#like_button_container');
-// ReactDOM.render(<LikeButton />, domContainer);
-
-import React from 'react';
-
-export default class TestComponent extends React.Component {
-  render(){
-    return (
-      <h1>Привет, мир!</h1>,
-      document.getElementById('root')
-    );
-  }
-}
