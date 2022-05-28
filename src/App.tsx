@@ -1,8 +1,9 @@
 import React from 'react';
 
 import AppRoutes from './routes/index';
+import './styles.css';
 
-const App = () => {
+const App = (): JSX.Element => {
   return <AppRoutes />;
 }
 
