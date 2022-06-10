@@ -1,8 +1,14 @@
 <template>
   <div class="navbar">
-    <div>about me</div>
-    <div>my stack</div>
-    <div>my project</div>
+    <div>
+      <span>about me</span>
+    </div>
+    <div>
+      <span>my stack</span>
+    </div>
+    <div>
+      <span>my project</span>
+    </div>
   </div>
 </template>
 
@@ -12,18 +18,25 @@
 <style lang="sass" scoped>
   .navbar
     position: absolute
-    height: 100px
-    width: 200px
-    background: gray
-    font-family: 'Press Start 2P'
-    color: #fff
+    height: 100%
+    margin-left: 50px
+    font-family: Raleway
+    color: #000
     display: flex
     flex-direction: column
-    justify-content: space-evenly
+    justify-content: center
     div
-      margin: 5px 0
       text-transform: uppercase
+      user-select: none
       cursor: pointer
       width: 100%
-      text-align: center
+      height: 20px
+      margin: 20px 0
+      padding: 10px
+      display: flex
+      align-items: center
+      span
+        transition-duration: .1s
+      span:hover
+        font-size: 20px
 </style>
