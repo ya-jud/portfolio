@@ -21,7 +21,7 @@
     height: 100%
     margin-left: 50px
     font-family: Raleway
-    color: #000
+    color: #fff
     display: flex
     flex-direction: column
     justify-content: center
