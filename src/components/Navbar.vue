@@ -1,18 +1,33 @@
 <template>
   <div class="navbar">
-    <div>
+    <div @click="scroll_to(props.anchors[0])">
       <span>about me</span>
     </div>
-    <div>
+    <div @click="scroll_to(props.anchors[1])">
       <span>my stack</span>
     </div>
-    <div>
-      <span>my project</span>
+    <div @click="scroll_to(props.anchors[2])">
+      <span>my projects</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+  import { ref } from 'vue'
+  const props = defineProps({
+    anchors: {
+      type: Array,
+      default: []
+    }
+  });
+  const scroll_to = anchor => {
+    console.log(anchor);
+    const root = ref(null);
+    // @ts-ignore
+    let element = root.value[anchor];
+    let goTo = element.offsetTop;
+    window.scrollTo(0, goTo);
+  };
 </script>
 
 <style lang="sass" scoped>
@@ -25,6 +40,7 @@
     display: flex
     flex-direction: column
     justify-content: center
+    z-index: 100
     div
       text-transform: uppercase
       user-select: none
@@ -37,6 +53,6 @@
       align-items: center
       span
         transition-duration: .1s
-      span:hover
-        font-size: 20px
+    div:hover
+      font-size: 20px
 </style>
