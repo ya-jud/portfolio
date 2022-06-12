@@ -33,22 +33,18 @@
 <style lang="sass" scoped>
   .navbar
     position: absolute
-    height: 100%
-    margin-left: 50px
     font-family: Raleway
+    right: 0
     color: #fff
     display: flex
-    flex-direction: column
-    justify-content: center
     z-index: 100
     div
       text-transform: uppercase
       user-select: none
       cursor: pointer
-      width: 100%
-      height: 20px
-      margin: 20px 0
-      padding: 10px
+      width: auto
+      padding: 20px
+      margin: 0 20px
       display: flex
       align-items: center
       span
