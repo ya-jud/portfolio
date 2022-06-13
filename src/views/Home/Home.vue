@@ -27,7 +27,7 @@
     z-index: 1
     .greetings
       @extend %align-center
-      background: linear-gradient(-45deg, #23a6d5, #23d5ab)
+      background: #6b6b
     div
       width: 100%
       height: 100%
