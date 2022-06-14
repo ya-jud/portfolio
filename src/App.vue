@@ -24,40 +24,31 @@
   .my_background:before
     content: ""
     position: absolute
-    background: #b0c4de
-    border-radius: 50%
-    width: 100px
-    height: 100px
-    left: 150px
-    bottom: 300px
-    filter: blur(10px)
+    width: 120px
+    height: 120px
+    left: 20%
+    top: 10%
+    animation: 5s rotate infinite linear
   .my_background:after
     content: ""
     position: absolute
-    border-radius: 50%
     width: 200px
     height: 200px
-    animation: 3s rotate infinite
+    top: 50%
+    right: 20%
+    animation: 4s rotate infinite linear
   @keyframes rotate
     0%
       background: #87cefa
       filter: blur(25px)
-      top: 20px
-      right: 20px
-    20%
-      top: 100px
-      right: 100px
+      border-radius: 50%
     50%
-      background: #b0c4de
+      background: #ffb6c1
       filter: blur(30px)
-      top: 200px
-      right: 200px
-    70%
-      top: 100px
-      right: 100px
+      border-radius: 0%
     100%
       background: #87cefa
       filter: blur(25px)
-      top: 20px
-      right: 20px
+      border-radius: 50%
+      transform: rotate(360deg)
 </style>
