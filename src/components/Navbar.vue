@@ -27,7 +27,6 @@
 <style lang="sass" scoped>
   .navbar
     position: absolute
-    font-family: Raleway
     right: 0
     color: #fff
     display: flex

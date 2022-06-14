@@ -13,4 +13,6 @@
   @font-face
     font-family: 'Press Start 2P'
     src: url('./fonts/Press_Start_2P/PressStart2P-Regular.ttf')
+  *
+    font-family: Raleway
 </style>
