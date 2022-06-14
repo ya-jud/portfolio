@@ -27,7 +27,7 @@
 <style lang="sass" scoped>
   .navbar
     position: absolute
-    right: 0
+    right: 20px
     color: #fff
     display: flex
     z-index: 100

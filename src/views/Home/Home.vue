@@ -1,7 +1,7 @@
 <template>
   <Navbar :anchors="anchors"/>
   <div class="container">
-    <div class="greetings">hi</div>
+    <Greetings />
     <div ref="about_me">About me</div>
     <div ref="stack">my stack</div>
     <div ref="projects">my projects</div>
@@ -12,6 +12,7 @@
 
   import { ref } from 'vue'; // ref для элемента
   import Navbar from '../../components/Navbar.vue';
+  import Greetings from './Greetings.vue';
 
   const about_me = ref(null); // инициализация ref элемента
   const stack = ref(null);
@@ -30,12 +31,5 @@
     width: 100%
     height: 100vh
     overflow: auto
-    background-color: #ddd // #222 dark theme
     z-index: 1
-    .greetings
-      @extend %align-center
-      background: #6b6b
-    div
-      width: 100%
-      height: 100%
 </style>
