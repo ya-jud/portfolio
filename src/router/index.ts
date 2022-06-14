@@ -12,5 +12,5 @@ const routes = [
 
 export default createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 });
