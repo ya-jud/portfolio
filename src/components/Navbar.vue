@@ -14,13 +14,26 @@
 
 <script setup lang="ts">
 
+  import { onMounted, onUnmounted } from 'vue';
+
   const props = defineProps({
     anchors: null
   });
 
   const scroll_to = anchor => {
-    props.anchors[anchor].value.scrollIntoView()
+    props.anchors[anchor].value.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
   };
+
+  onMounted(() => {
+    window.addEventListener('wheel', scroll_to);
+  });
+
+  onUnmounted(() => {
+    window.removeEventListener('wheel', scroll_to);
+  });
 
 </script>
 
@@ -41,6 +54,7 @@
       margin: 0 20px
       display: flex
       align-items: center
+      justify-content: center
       span
         transition-duration: .1s
     div:hover

@@ -1,5 +1,5 @@
 <template>
-  <div class="greetings">Hi</div>
+  <div class="greeting">Hi</div>
 </template>
 
 <script setup lang="ts">
@@ -10,7 +10,7 @@
     display: flex
     justify-content: center
     align-items: center
-  .greetings
+  .greeting
     @extend %align-center
     height: 100%
     font-size: 50px
