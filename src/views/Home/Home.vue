@@ -1,23 +1,27 @@
 <template>
   <Navbar :anchors="anchors"/>
-  <div class="container" ref="container">
+  <div class="container">
     <Greeting />
-    <div ref="about_me" style="height: 100vh;">about me</div>
-    <div ref="stack" style="height: 100vh;">my stack</div>
-    <div ref="projects" style="height: 100vh;">project</div>
+    <About ref="about"/>
+    <Stack ref="stack"/>
+    <Projects ref="projects"/>
   </div>
 </template>
 
 <script setup lang="ts">
 
   import { ref } from 'vue'; // ref для элемента
+
   import Navbar from '../../components/Navbar.vue';
   import Greeting from './Greeting.vue';
+  import About from './About.vue';
+  import Stack from './Stack.vue';
+  import Projects from './Projects.vue';
 
-  const about_me = ref(null); // инициализация ref элемента
+  const about = ref(null); // инициализация ref элемента
   const stack = ref(null);
   const projects = ref(null);
-  const anchors = [about_me, stack, projects];
+  const anchors = [about, stack, projects];
 
 </script>
 
@@ -32,12 +36,11 @@
     height: 100vh
     overflow: auto
     z-index: 1
-    // scroll-snap-type: y mandatory
+    scroll-snap-type: y mandatory
     div
       @extend %align-center
-      // scroll-snap-align: start
+      scroll-snap-align: start
       color: white
       font-size: 40px
       text-transform: uppercase
-      border-top: 2px solid #fff
 </style>

@@ -21,19 +21,11 @@
   });
 
   const scroll_to = anchor => {
-    props.anchors[anchor].value.scrollIntoView({
+    props.anchors[anchor].value.$el.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     })
   };
-
-  onMounted(() => {
-    window.addEventListener('wheel', scroll_to);
-  });
-
-  onUnmounted(() => {
-    window.removeEventListener('wheel', scroll_to);
-  });
 
 </script>
 
